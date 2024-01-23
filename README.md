@@ -17,9 +17,24 @@
 ❯ bun add bunbox
 ```
 
-3. Create a controller: `/controllers/hello.ts`
+## Usage
+
+My goal with this project is to hideaway as much of the boiler plate import
+crud as I can, following in the footsteps of frameworks like Rails.
+
+By default, this is the directory structure `bunbox` expects:
+
+```txt
+|
+|- index.ts
+|- controllers/
+    |- hello.ts
+```
+
+1. Create a controller:
 
 ```ts
+// controllers/hello.ts
 import { Controller } from "bunbox"
 import type { Context } from "bunbox"
 
@@ -36,6 +51,20 @@ class HelloController implements Controller {
 }
 
 export default HelloController
+```
+
+or in vanilla JavaScript:
+
+```js
+// controllers/hello.js
+class HelloController {
+    constructor() {
+        this.method = "GET"
+        this.route = "/hello"
+    }
+
+    run = c => c.text("Hello")
+}
 ```
 
 4. Update your `index.ts`:

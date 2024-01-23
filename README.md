@@ -24,7 +24,7 @@ crud as I can, following in the footsteps of frameworks like Rails.
 
 By default, this is the directory structure `bunbox` expects:
 
-```txt
+```
 |
 |- index.ts
 |- controllers/

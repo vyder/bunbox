@@ -1,0 +1,13 @@
+#!/bin/sh
+
+SCRIPT_DIR=$(readlink -f "$0")
+ROOT=$(dirname $(dirname $SCRIPT_DIR))
+
+DIST=$ROOT/dist
+SOURCE=$ROOT/src
+
+bun test || exit 1
+
+rm -rf $DIST
+bun build $SOURCE/index.ts --outfile=$DIST/bunbox.js --target=bun
+tsc --emitDeclarationOnly --declarationDir $DIST

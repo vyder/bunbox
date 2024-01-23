@@ -1,0 +1,11 @@
+arrowParens: avoid
+endOfLine: lf
+semi: false
+singleQuote: false
+tabWidth: 4
+overrides:
+  -
+    files: '*.json'
+    options:
+      tabWidth: 2
+

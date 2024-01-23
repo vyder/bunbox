@@ -1,0 +1,39 @@
+{
+  "name": "bunbox",
+  "version": "0.0.1",
+  "description": "A framework to build APIs with bun",
+  "main": "./dist/bunbox.js",
+  "types": "./dist/index.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "compile": "./bin/compile",
+    "test": "bun test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vyder/bunbox.git"
+  },
+  "keywords": [
+    "bun",
+    "api",
+    "framework"
+  ],
+  "author": "Vidur Murali <vidur@monkeychai.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vyder/bunbox/issues"
+  },
+  "homepage": "https://github.com/vyder/bunbox#readme",
+  "dependencies": {
+    "hono": "^3.12.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "axios": "^1.6.5",
+    "bun-types": "^1.0.25"
+  }
+}
